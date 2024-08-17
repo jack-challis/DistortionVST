@@ -1,4 +1,0 @@
-# Hashes of file build rules.
-019e7622e50a0e32e12c8b682750a2db plugin/DistortionVST_artefacts/JuceLibraryCode/DistortionVST_AU/PkgInfo
-b8093f33bead7daa4afab1c8aa6e5ed0 plugin/DistortionVST_artefacts/JuceLibraryCode/DistortionVST_Standalone/PkgInfo
-513403a210c1270255d66ce705a46a82 plugin/DistortionVST_artefacts/JuceLibraryCode/DistortionVST_VST3/PkgInfo
