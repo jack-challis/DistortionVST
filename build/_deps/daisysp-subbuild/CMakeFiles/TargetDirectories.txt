@@ -1,0 +1,3 @@
+/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/CMakeFiles/daisysp-populate.dir
+/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/CMakeFiles/edit_cache.dir
+/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/CMakeFiles/rebuild_cache.dir

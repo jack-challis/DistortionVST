@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/CMakeFiles/daisysp-populate"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/CMakeFiles/daisysp-populate.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/CMakeFiles/daisysp-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-build.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-download.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-install.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-test.rule"
+		},
+		{
+			"file" : "/Users/jackchallis/Documents/AudioCoding/Projects/DistortionVST/build/_deps/daisysp-subbuild/daisysp-populate-prefix/src/daisysp-populate-stamp/daisysp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"daisysp-populate"
+		],
+		"name" : "daisysp-populate"
+	}
+}
