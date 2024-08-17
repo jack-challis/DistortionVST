@@ -26,11 +26,11 @@ Where:
 - `volume`: A multiplier to control the final output level.
 
 ### Behavior:
-- The `atan` function creates a soft-clipping effect, meaning the signal is smoothly compressed as it reaches higher amplitudes, avoiding the harshness of hard clipping.
-- The `blend` parameter allows for a mix of both the distorted and clean signals.
-- The `volume` parameter scales the output, controlling the overall gain.
+- The `atan` function non-linearly distorts the input signal, smoothly compressing the signal as it reaches higher amplitudes.
+- The `blend` parameter is a wet/dry mix, allowing the dry signal to be blended in.
+- The `volume` parameter scales the output, controlling gain.
 
-This algorithm provides a natural-sounding distortion effect with smooth transition from clean to clipped audio.
+This algorithm provides a smooth non-linear distortion, akin to a simple analogue circuit
 
 ### Hard clipping
 To be implemented
