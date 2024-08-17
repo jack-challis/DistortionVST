@@ -13,9 +13,9 @@ Currently this plugin only makes use of a soft clipping algorithm, with plans to
 
 The following formula describes the soft clipping distortion algorithm used in the code:
 
-\[
+\$$
 \text{output} = \left( \frac{2}{\pi} \cdot \text{atan}(\text{input}) \cdot \text{blend} + \text{cleanSig} \cdot (1 - \text{blend}) \right) \cdot \text{volume}
-\]
+\$$
 
 Where:
 - `input`: The input audio signal.
