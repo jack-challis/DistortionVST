@@ -5,7 +5,7 @@ project(DistortionVST_env)
 set(CMAKE_CXX_STANDARD 23)
 
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libs)
-include(cmake/cpm.cmake)
+include(libs/cpm/CPM_0.38.7.cmake)
 
 CPMaddPackage(
     NAME JUCE
@@ -40,5 +40,5 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-add_subdirectory(plugin)
+add_subdirectory(plugins)
 add_subdirectory(test)

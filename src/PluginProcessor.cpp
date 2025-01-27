@@ -1,5 +1,5 @@
-#include "DistortionVST/PluginProcessor.h"
-#include "DistortionVST/PluginEditor.h"
+#include "PluginProcessor.h"
+#include "PluginEditor.h"
 
 //==============================================================================
 AudioPluginAudioProcessor::AudioPluginAudioProcessor()
@@ -12,12 +12,17 @@ AudioPluginAudioProcessor::AudioPluginAudioProcessor()
                      #endif
                        )
 {
+    //stores state/parameters
     state = std::make_unique<juce::AudioProcessorValueTreeState>(*this,nullptr);
-    state->createAndAddParameter("drive", "Drive", "Drive", juce::NormalisableRange<float>(0.f, 100.f, 0.0001f), 1.f, nullptr, nullptr);
-    state->createAndAddParameter("blend", "Blend", "Blend", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 1.f, nullptr, nullptr);
-    state->createAndAddParameter("range", "Range", "Range", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 1.f, nullptr, nullptr);
-    state->createAndAddParameter("volume", "Volume", "Volume", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 1.f, nullptr, nullptr);
 
+    //adding parameters to state
+    //state->createAndAddParameter("name", "label", "type", juce::NormalisableRange<float>(start, end, scale), defaultVal, callback, callback);
+    state->createAndAddParameter("drive", "Drive", "Drive", juce::NormalisableRange<float>(0.f, 100.f, 0.0001f), 0.f, nullptr, nullptr);
+    state->createAndAddParameter("blend", "Blend", "Blend", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 0.f, nullptr, nullptr);
+    state->createAndAddParameter("range", "Range", "Range", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 0.f, nullptr, nullptr);
+    state->createAndAddParameter("volume", "Volume", "Volume", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 0.f, nullptr, nullptr);
+
+    //Assigning to ValueTree
     state->state = juce::ValueTree("drive");
     state->state = juce::ValueTree("range");
     state->state = juce::ValueTree("blend");    

@@ -7,6 +7,11 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(AudioPluginAudi
 {
     juce::ignoreUnused(processorRef);
 
+    /*
+        making UI elements visible
+    */
+
+    // knobs
     driveKnob = std::make_unique<juce::Slider>("Drive");
     addAndMakeVisible(*driveKnob);
     driveKnob->setSliderStyle(juce::Slider::Rotary);
@@ -26,6 +31,13 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(AudioPluginAudi
     addAndMakeVisible(*volumeKnob);
     volumeKnob->setSliderStyle(juce::Slider::Rotary);
     volumeKnob->setTextBoxStyle(juce::Slider::NoTextBox, false, 100, 100);
+
+    // drop down menu
+    algorithmMenu = std::make_unique<juce::ComboBox>("Algorithm");
+    addAndMakeVisible(*algorithmMenu);
+    algorithmMenu->addItem ("soft clip", 1);
+    algorithmMenu->addItem ("hard clip", 1);
+    algorithmMenu->addItem ("wavefold", 1);
 
     driveAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(p.getState(), "drive", *driveKnob);
     rangeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(p.getState(), "range", *rangeKnob);

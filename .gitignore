@@ -1,13 +1,16 @@
 # Ignore macOS system files
 .DS_Store
 
+# Ignore created dependencies
+_deps
+
 # Ignore build directories (if applicable)
 build/
 cmake-build-debug/
 cmake-build-release/
 
 # Ignore plugin binaries and resources
-plugins/DistortionVST.app/
+plugins/DistortionVST_artefacts/
 plugins/DistortionVST.component/
 plugins/DistortionVST.vst3/
 

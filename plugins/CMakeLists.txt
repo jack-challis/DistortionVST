@@ -15,8 +15,8 @@ juce_add_plugin(${PROJECT_NAME}
 
 target_sources(${PROJECT_NAME}
     PRIVATE
-        source/PluginEditor.cpp
-        source/PluginProcessor.cpp
+        ../src/PluginEditor.cpp
+        ../src/PluginProcessor.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
