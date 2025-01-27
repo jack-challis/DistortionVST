@@ -9,6 +9,9 @@ build/
 cmake-build-debug/
 cmake-build-release/
 
+# Ignore makefile
+Makefile
+
 # Ignore plugin binaries and resources
 plugins/DistortionVST_artefacts/
 plugins/DistortionVST.component/
