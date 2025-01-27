@@ -11,11 +11,14 @@ cmake-build-release/
 
 # Ignore makefile
 Makefile
+plugins/Makefile
+test/Makefile
+
+#ignore juce vst3 helper
+plugins/JUCEVST3Helper/
 
 # Ignore plugin binaries and resources
 plugins/DistortionVST_artefacts/
-plugins/DistortionVST.component/
-plugins/DistortionVST.vst3/
 
 # Ignore CMakeCache.txt and other generated CMake files
 CMakeCache.txt
