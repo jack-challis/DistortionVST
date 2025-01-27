@@ -15,7 +15,7 @@ plugins/Makefile
 test/Makefile
 
 #ignore juce vst3 helper
-plugins/JUCEVST3Helper/
+plugins/juce_vst3_helper
 
 # Ignore plugin binaries and resources
 plugins/DistortionVST_artefacts/
