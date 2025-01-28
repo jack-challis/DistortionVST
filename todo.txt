@@ -1,0 +1,7 @@
+TO DO LIST / IDEAS TO IMPLEMENT
+- drop down menu to select distortion algorithm
+- visuals
+    - showing waveform
+    - showing harmonics (fft)
+- bypass switch
+- automated gain matching switch

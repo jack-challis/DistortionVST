@@ -12,6 +12,7 @@ target_include_directories(${PROJECT_NAME}
     PRIVATE
         ${GOOGLETEST_SOURCE_DIR}/googletest/include
         ${CMAKE_CURRENT_SOURCE_DIR}/../plugin/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/../src
         ${JUCE_SOURCE_DIR}/modules
 )
 

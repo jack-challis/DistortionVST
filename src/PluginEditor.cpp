@@ -2,6 +2,15 @@
 #include "PluginEditor.h"
 
 //==============================================================================
+
+//global knob size variables
+uint32_t knob_h = 100;
+uint32_t knob_w = 100;
+
+//global menu size variables
+uint32_t menu_h = 50;
+uint32_t menu_w = 200;
+
 AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(AudioPluginAudioProcessor& p)
     : AudioProcessorEditor(&p), processorRef(p)
 {
@@ -36,17 +45,20 @@ AudioPluginAudioProcessorEditor::AudioPluginAudioProcessorEditor(AudioPluginAudi
     algorithmMenu = std::make_unique<juce::ComboBox>("Algorithm");
     addAndMakeVisible(*algorithmMenu);
     algorithmMenu->addItem ("soft clip", 1);
-    algorithmMenu->addItem ("hard clip", 1);
-    algorithmMenu->addItem ("wavefold", 1);
+    algorithmMenu->addItem ("hard clip", 2);
+    algorithmMenu->addItem ("wavefold", 3);
+    algorithmMenu->setSelectedId(1, juce::dontSendNotification); // default
 
     driveAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(p.getState(), "drive", *driveKnob);
     rangeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(p.getState(), "range", *rangeKnob);
     blendAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(p.getState(), "blend", *blendKnob);
     volumeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(p.getState(), "volume", *volumeKnob);
 
+    algorithmAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(p.getState(), "algorithm", *algorithmMenu);
+    
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize(500, 200);
+    setSize(500, 500);
 }
 
 AudioPluginAudioProcessorEditor::~AudioPluginAudioProcessorEditor()
@@ -74,9 +86,12 @@ void AudioPluginAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
 
-    driveKnob->setBounds(((getWidth() / 5) * 1) - (100 / 2), ((getHeight() / 2)-(100 / 2)), 100, 100);
-    rangeKnob->setBounds(((getWidth() / 5) * 2) - (100 / 2), ((getHeight() / 2)-(100 / 2)), 100, 100);
-    blendKnob->setBounds(((getWidth() / 5) * 3) - (100 / 2), ((getHeight() / 2)-(100 / 2)), 100, 100);
-    volumeKnob->setBounds(((getWidth() / 5) * 4) - (100 / 2) ,((getHeight() / 2)-(100 / 2)), 100, 100);
+    //setBounds(int x, int y, int width, int height)
+    driveKnob->setBounds(((getWidth() / 5) * 1) - (knob_w / 2), ((getHeight() / 2)-(knob_h / 2)), knob_w, knob_h);
+    rangeKnob->setBounds(((getWidth() / 5) * 2) - (knob_w / 2), ((getHeight() / 2)-(knob_h / 2)), knob_w, knob_h);
+    blendKnob->setBounds(((getWidth() / 5) * 3) - (knob_w / 2), ((getHeight() / 2)-(knob_h / 2)), knob_w, knob_h);
+    volumeKnob->setBounds(((getWidth() / 5) * 4) - (knob_w / 2) ,((getHeight() / 2)-(knob_h / 2)), knob_w, knob_h);
+
+    algorithmMenu->setBounds(((getWidth() / 2) - (menu_w / 2)), ((getHeight() / 3)-(menu_h / 2)), menu_w, menu_h);
 
 }

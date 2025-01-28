@@ -22,11 +22,22 @@ AudioPluginAudioProcessor::AudioPluginAudioProcessor()
     state->createAndAddParameter("range", "Range", "Range", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 0.f, nullptr, nullptr);
     state->createAndAddParameter("volume", "Volume", "Volume", juce::NormalisableRange<float>(0.f, 1.f, 0.0001f), 0.f, nullptr, nullptr);
 
+    state->createAndAddParameter(std::make_unique<juce::AudioParameterChoice>("algorithm", "Distortion Algorithm", juce::StringArray("Soft Clip", "Hard Clip", "Wavefold"), 0));
+
+    //How to create and add parameters for drop down menu?
+    //state->createAndAddParameter("algorithm", "Algorithm", "Algorithm", 
+    //juce::StringArray{"Clean", "Overdrive", "Distortion"}, 0, nullptr, nullptr);
+
+    //state->createAndAddParameter("aglorithm", "Algorithm", "Algorithm", juce::NormalisableRange<float>(0.f, 2.f, 1.f), 0.f, nullptr, nullptr);
+    //state->createAndAddParameter("aglorithm", "Algorithm", "Algorithm", juce::StringArray{"Clean", "Overdrive", "Distortion"}, 1, nullptr, nullptr);
+    
     //Assigning to ValueTree
     state->state = juce::ValueTree("drive");
     state->state = juce::ValueTree("range");
     state->state = juce::ValueTree("blend");    
     state->state = juce::ValueTree("volume");
+
+    state->state = juce::ValueTree("algorithm");
 }
 
 AudioPluginAudioProcessor::~AudioPluginAudioProcessor()

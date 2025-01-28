@@ -18,6 +18,9 @@ private:
         Create UI elements
     */
 
+    //state
+    std::unique_ptr<juce::AudioProcessorValueTreeState> state;  // Declare the state
+
     //knobs
     std::unique_ptr<juce::Slider> driveKnob;
     std::unique_ptr<juce::Slider> rangeKnob;
@@ -38,7 +41,7 @@ private:
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> volumeAttachment;
 
     //drop down menu
-    
+    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> algorithmAttachment;
 
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.

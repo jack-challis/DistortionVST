@@ -28,6 +28,9 @@ CMakeFiles/
 # Ignore dependency managers or external libraries
 libs/CPM_0.38.7.cmake
 
+# Ignore lib, bin
+lib
+
 # Optionally ignore any IDE specific files (e.g., for Xcode or CLion)
 .idea/
 .vscode/

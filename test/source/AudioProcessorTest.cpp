@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <DistortionVST/PluginProcessor.h>
+#include <../src/PluginProcessor.h>
 
 namespace DisortionVST_test{
     TEST(AudioPluginAudioProcessor, Foo){

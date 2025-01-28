@@ -16,13 +16,6 @@ CPMaddPackage(
 )
 
 CPMaddPackage(
-    NAME DaisySP
-    GITHUB_REPOSITORY electro-smith/DaisySP
-    GIT_TAG v0.0.2
-    SOURCE_DIR ${LIB_DIR}/daisysp
-)
-
-CPMaddPackage(
     NAME GOOGLETEST
     GITHUB_REPOSITORY google/googletest
     GIT_TAG v1.14.0
